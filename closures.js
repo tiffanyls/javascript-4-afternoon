@@ -217,11 +217,13 @@ function secretNumber() {
   Fix the code below to log the desired output.
 */
 
+function setJ(param) {
+  return() => console.log(param)
+}
+
 function timeOutCounter() {
   for (var i = 0; i <= 5; i++) {
-    setTimeout(function() {
-      console.log(i);
-    }, i * 1000);
+    setTimeout(setJ(i), i * 1000);
   }
 }
 timeOutCounter();
